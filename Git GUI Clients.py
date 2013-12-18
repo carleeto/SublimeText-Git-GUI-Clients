@@ -22,7 +22,7 @@ class GgcOpenCommand(sublime_plugin.WindowCommand):
         for dir_path in list(set(dirs)):
             git_dir = os.path.join(dir_path, '.git')
             if os.path.exists(git_dir):
-                return git_dir
+                return dir_path
 
     def get_excecutable(self, cmd):        
         s = sublime.load_settings("Git GUI Clients.sublime-settings")
